@@ -48,3 +48,18 @@ add_subdirectory(test)
 ############# Final Project ###############
 add_executable(${TARGET_NAME} main.cpp)
 target_link_libraries(${TARGET_NAME} PUBLIC ${RUNTIME_TARGET_NAME})
+
+## 设置编译类型
+#set(CMAKE_BUILD_TYPE Debug) # 或 Release
+# 根据编译类型定义宏
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_definitions(-DMYDEBUG)
+endif()
+
+
+# Asset Load
+add_custom_command(
+        TARGET ${TARGET_NAME}
+        COMMENT "Copy Config"
+        PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/assets $<TARGET_FILE_DIR:${TARGET_NAME}>/assets
+        VERBATIM)

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/assets/config.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cmake-build-release/assets/config.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/main.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/equipment/Equipment.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test/test1/a.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test/test2/config.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/test/test3/config.json" charset="GBK" />
+  </component>
+</project>

@@ -1,37 +1,85 @@
 [
   {
     "name": "rarity",
-    "count": 5,
-    "isvalid": true,
-    "children": [],
-    "array": ["white", "green", "blue", "purple", "gold"],
-    "possibility": [40, 30, 20, 9, 1],
-    "value": [10, 20, 30, 40, 50]
-  },
-  {
-    "name": "",
-    "count": 5,
-    "isvalid": true,
-    "children": [2, 3],
-    "array": ["white", "green", "blue", "purple", "gold"],
-    "possibility": [40, 30, 20, 9, 1]
-  },
-  {
-    "name": "rarity",
-    "count": 5,
-    "isvalid": true,
-    "children": [],
-    "array": ["white", "green", "blue", "purple", "gold"],
-    "possibility": [40, 30, 20, 9, 1],
-    "value": [10]
-  },
-  {
-    "name": "rarity",
-    "count": 0,
-    "isvalid": true,
-    "children": [],
-    "array": ["white", "green", "blue", "purple", "gold"],
-    "possibility": [40, 30, 20, 9, 1],
-    "value": [10]
+    "array": [
+      "╟в",
+      "бл",
+      "ю╤",
+      "во",
+      "╫П"
+    ],
+    "possibility": [
+      [
+        7,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        3,
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        4,
+        3,
+        0,
+        0
+      ],
+      [
+        2,
+        3,
+        4,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        5,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        5,
+        3,
+        2
+      ],
+      [
+        40,
+        30,
+        20,
+        9,
+        1
+      ]
+    ],
+    "value": [
+      [
+        0,
+        -1
+      ],
+      [
+        500,
+        700
+      ],
+      [
+        1000,
+        1200
+      ],
+      [
+        1500,
+        2500
+      ],
+      [
+        2500,
+        -1
+      ]
+    ]
   }
 ]

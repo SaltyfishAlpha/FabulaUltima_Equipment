@@ -15,8 +15,6 @@
 #include <fstream>
 
 namespace fue{
-    static const char* kTypeNames[] =
-            { "Null", "False", "True", "Object", "Array", "String", "Number" };
 
     class JSONHandler {
     public:
@@ -30,7 +28,8 @@ namespace fue{
             }
 
             rapidjson::IStreamWrapper isw(inputFile);
-            jsonData.ParseStream(isw);
+            rapidjson::AutoUTFInputStream<unsigned, rapidjson::IStreamWrapper> autoStream(isw);
+            jsonData.ParseStream(autoStream);
 
             if (jsonData.HasParseError()) {
                 LOG_E("Error parsing JSON from file");
@@ -49,7 +48,9 @@ namespace fue{
             }
 
             rapidjson::OStreamWrapper osw(outputFile);
-            rapidjson::PrettyWriter<rapidjson::OStreamWrapper> writer(osw);
+            typedef rapidjson::AutoUTFOutputStream<unsigned, rapidjson::OStreamWrapper> OutputStream;
+            OutputStream autoStream(osw, rapidjson::kUTF8, false);
+            rapidjson::PrettyWriter<OutputStream> writer(autoStream);
             jsonData.Accept(writer);
 
             outputFile.close();
